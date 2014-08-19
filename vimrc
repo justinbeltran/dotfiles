@@ -10,7 +10,9 @@ Bundle 'gmarik/Vundle.vim'
 
 " Basic
 set number
-set clipboard=unnamed
+if $TMUX == ''
+	set clipboard=unnamed
+endif
 set sw=4 ts=4 sts=4
 autocmd FileType ruby :setlocal sw=2 ts=2 sts=2 " Two spaces for HTML files "
 
