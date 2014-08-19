@@ -18,8 +18,6 @@ bind J resize-pane -D 5
 bind K resize-pane -U 5
 bind L resize-pane -R 5
 setw -g mode-mouse off
-
-set-option -g default-command "reattach-to-user-namespace -l zsh"
-# Make sure powerline is pip installed
-source /usr/local/lib/python2.7/site-packages/powerline/bindings/tmux/powerline.conf
 set -g default-terminal "screen-256color"
+# alternatively, check file exists before sourcing it in tmux.conf
+if-shell "test -f ~/.tmuxtheme.conf" "source ~/.tmuxtheme.conf"
