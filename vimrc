@@ -54,7 +54,6 @@ syntax on
 " vim-airline
 Plugin 'bling/vim-airline'
 let g:airline_powerline_fonts = 1
-let g:airline_theme='powerlineish'
 set laststatus=2
 
 " tmuxline.vim
