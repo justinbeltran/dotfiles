@@ -42,12 +42,6 @@ Plugin 'ZoomWin'
 " Vim-Signify
 Plugin 'mhinz/vim-signify' 
 
-" Go
-Plugin 'jnwhiteh/vim-golang'
-Plugin 'Blackrush/vim-gocode'
-Plugin 'nsf/gocode', {'rtp': 'vim/'}
-
-set rtp+=$GOROOT/misc/vim
 filetype plugin indent on
 syntax on
 
@@ -58,3 +52,7 @@ set laststatus=2
 
 " tmuxline.vim
 Plugin 'edkolev/tmuxline.vim'
+
+" go support
+Plugin 'fatih/vim-go'
+let g:go_disable_autoinstall = 0
