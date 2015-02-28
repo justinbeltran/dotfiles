@@ -21,3 +21,6 @@ setw -g mode-mouse off
 set -g default-terminal "screen-256color"
 # alternatively, check file exists before sourcing it in tmux.conf
 if-shell "test -f ~/.tmuxtheme.conf" "source ~/.tmuxtheme.conf"
+
+#reorder windows when windows are removed
+set-option -g renumber-windows on
