@@ -44,9 +44,12 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+#Adding GOPATH
+export GOPATH=$HOME/Programming/go
+
 # Customize to your needs...
 #export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
-export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/bin:$GOPATH:$PATH"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export DOCKER_HOST=tcp://
