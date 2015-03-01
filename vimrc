@@ -3,11 +3,13 @@ call plug#begin('~/.vim/plugged')
 Plug 'nanotech/jellybeans.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
-Plug 'ZoomWin' 
+Plug 'ZoomWin'
 Plug 'mhinz/vim-signify' 
 Plug 'bling/vim-airline'
 Plug 'edkolev/tmuxline.vim'
 Plug 'fatih/vim-go'
+Plug 'Shougo/neocomplete.vim' " vim needs to be installed with lua support
+Plug 'elzr/vim-json', {'for' : 'json'}
 
 call plug#end()
 
@@ -48,3 +50,6 @@ set shell=/bin/sh
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
+
+" neocomplete
+let g:neocomplete#enable_at_startup = 1
