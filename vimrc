@@ -1,15 +1,22 @@
-set nocompatible               " be iMproved
-filetype off                   " required!
-filetype plugin indent off
+call plug#begin('~/.vim/plugged')
 
-" Setup vundle per https://github.com/gmarik/Vundle.vim
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#rc()
+Plug 'nanotech/jellybeans.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'kien/ctrlp.vim'
+Plug 'ZoomWin' 
+Plug 'mhinz/vim-signify' 
+Plug 'bling/vim-airline'
+Plug 'edkolev/tmuxline.vim'
+Plug 'fatih/vim-go'
 
-" required! 
-Plugin 'gmarik/Vundle.vim'
+call plug#end()
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+filetype plugin indent on    " required
 
 " Basic
+set laststatus=2 " Always show statusline
 set number
 if $TMUX == ''
 	set clipboard=unnamed
@@ -17,42 +24,27 @@ endif
 set sw=4 ts=4 sts=4
 autocmd FileType ruby :setlocal sw=2 ts=2 sts=2 " Two spaces for HTML files "
 
-" Always show statusline
-set laststatus=2
-
-" Color Scheme
-Plugin 'nanotech/jellybeans.vim'
-set t_Co=256  " Set terminal to display 256 colors.
+" Appearance"
+syntax enable
 colorscheme jellybeans
+set t_Co=256  " Set terminal to display 256 colors.
 
 " NERDTree
-Plugin 'scrooloose/nerdtree'
 map <Leader>n :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.pyc$']
+
 " CtrlP
-Plugin 'kien/ctrlp.vim'
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
   \ 'file': '\v\.(exe|so|dll|pyc)$'
   \ }
 
-" ZoomWin
-Plugin 'ZoomWin' 
-
-" Vim-Signify
-Plugin 'mhinz/vim-signify' 
-
-filetype plugin indent on
-syntax on
-
 " vim-airline
-Plugin 'bling/vim-airline'
 let g:airline_powerline_fonts = 1
 set laststatus=2
 
-" tmuxline.vim
-Plugin 'edkolev/tmuxline.vim'
-
 " go support
-Plugin 'fatih/vim-go'
-let g:go_disable_autoinstall = 0
+set shell=/bin/sh
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1

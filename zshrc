@@ -45,9 +45,9 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 #Adding GOPATH
-export GOPATH=$HOME/Programming/go
-export GOROOT=/usr/local/go
-export GOBIN=$GOROOT/bin/
+export GOPATH=$HOME/Programming/gopath
+export GOROOT=$HOME/Programming/go
+export GOBIN=$GOROOT/bin
 export PATH=$PATH:$GOBIN:$GOPATH/bin
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
