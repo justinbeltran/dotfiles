@@ -10,6 +10,7 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'fatih/vim-go'
 Plug 'Shougo/neocomplete.vim' " vim needs to be installed with lua support
 Plug 'elzr/vim-json', {'for' : 'json'}
+Plug 'Raimondi/delimitMate'
 
 call plug#end()
 
@@ -53,3 +54,4 @@ let g:go_highlight_structs = 1
 
 " neocomplete
 let g:neocomplete#enable_at_startup = 1
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
